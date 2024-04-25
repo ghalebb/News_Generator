@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>News Articles</h2>
+<ul>
+    {% for article in articles %}
+    <li>
+        <h3><a href="{% url 'article_detail' article.pk %}">{{ article.title }}</a></h3>
+        <p>{{ article.description }}</p>
+        <p>Sentiment: {{ article.sentiment_classification }} (Score: {{ article.sentiment_score }})</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

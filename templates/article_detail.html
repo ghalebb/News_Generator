@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ article.title }}</h2>
+<p>{{ article.description }}</p>
+<p><strong>Source:</strong> {{ article.source_name }}</p>
+<p><strong>Published at:</strong> {{ article.published_at }}</p>
+<p><strong>Sentiment:</strong> {{ article.sentiment_classification }} (Score: {{ article.sentiment_score }})</p>
+<a href="{{ article.url }}">Read full article</a>
+{% endblock %}
