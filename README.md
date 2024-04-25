@@ -11,10 +11,10 @@ Ensure you have Python installed on your machine. You can download Python from [
 ## Setup
 
 ### 1. Clone the Project
-
+``` bash
 - git clone https://github.com/ghalebb/News_Generator.git
 - cd News_Generator
-
+```
 ### 2. Install Dependencies
 
 - Navigate to the project directory where `requirements.txt` is located.
