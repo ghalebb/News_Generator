@@ -1,12 +1,12 @@
 name: CI-CD pipeline to AWS
 env:
   DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
-  EB_S3_BUCKET_NAME: ${{ secrets.EB_S3_BUCKET_NAME }}
+  EB_S3_BUCKET_NAME: "django-deployment-newsapp"
   EB_APPLICATION_NAME: "django-app"
   EB_ENVIRONMENT_NAME: "Django-app-env"
   DEPLOY_PACKAGE_NAME: "django-app-${{ github.sha }}.zip"
   VERSION_NAME: ${{ github.sha }}
-  AWS_REGION_NAME: "us-east-1"
+  AWS_REGION_NAME: "us-east-2"
 
 on:
   push:
@@ -17,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git clone on our repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v2
         with:
           python-version: 3.8
 
