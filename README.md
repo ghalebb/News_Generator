@@ -1,4 +1,3 @@
-
 # News Collector Django Project
 
 ## Project Description
