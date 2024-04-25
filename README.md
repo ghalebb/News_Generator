@@ -12,8 +12,8 @@ Ensure you have Python installed on your machine. You can download Python from [
 
 ### 1. Clone the Project
 ``` bash
-- git clone https://github.com/ghalebb/News_Generator.git
-- cd News_Generator
+ git clone https://github.com/ghalebb/News_Generator.git
+ cd News_Generator
 ```
 ### 2. Install Dependencies
 
