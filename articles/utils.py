@@ -1,57 +1,3 @@
-# import os
-# import requests
-# import nltk
-# from nltk.sentiment import SentimentIntensityAnalyzer
-
-
-# def fetch_news(api_key):
-#     # GET https://newsapi.org/v2/top-headlines?country=us&apiKey=API_KEY
-#     url = "https://newsapi.org/v2/top-headlines"
-#     parameters = {
-#         'country': 'us',
-#         'apiKey': api_key,
-#     }
-#     response = requests.get(url, params=parameters)
-#     return response.json()
-
-
-# def fetch_and_analyze_news(api_key):
-#     news_data = fetch_news(api_key)
-#     articles = news_data['articles']
-#     for article in articles:
-#         sentiment = analyze_sentiment(
-#             article['description'] if article['description'] else article['title'])
-#         article['sentiment'] = sentiment
-#     return articles
-
-
-# def print_news(articles):
-#     for article in articles:
-#         print(f"Title: {article['title']}\nDescription: {article['description']}/n")
-
-
-# nltk.download('vader_lexicon')
-
-
-# def analyze_sentiment(text):
-#     sia = SentimentIntensityAnalyzer()
-#     sentiment = sia.polarity_scores(text)
-#     return sentiment
-
-
-# def print_analyzed_articles(analyzed_articles):
-#     for article in analyzed_articles:
-#         print(f"Title: {article['title']} Sentiment: {article['sentiment']}")
-
-
-# if __name__ == "__main__":
-#     api_key = os.environ("NEWS_API_TOKEN")
-#     news_data = fetch_news(api_key)
-#     analyzed_articles = fetch_and_analyze_news(api_key)
-
-#     print_news(news_data['articles'])
-#     print_analyzed_articles(analyzed_articles)
-
 import requests
 from nltk.sentiment import SentimentIntensityAnalyzer
 import nltk
@@ -78,9 +24,32 @@ def analyze_sentiment(text):
     sentiment = sia.polarity_scores(text)
     return sentiment
 
+def fetch_news(api_key,query):
+    
+    url = 'https://newsapi.org/v2/everything'
+    params = {
+        'q': query,
+        'apiKey': api_key,
+        'language': 'en',
+        'sortBy': 'publishedAt'
+    }
+    response = requests.get(url, params=params)
+    if response.status_code == 200:
+        return response.json().get('articles',[])
+    else:
+        return response.status_code, response.text
+    
+def fetch_and_analyze_news(api_key):
+    articles = fetch_news(api_key, 'Star Wars')
+    for article in articles:
+        sentiment = analyze_sentiment(
+            article['description'] if article['description'] else article['title'])
+        article['sentiment'] = sentiment
+    return articles
+
 def process_and_load_news(api_key):
     """Fetch news, process them, and load them into the database."""
-    articles = fetch_news(api_key)
+    articles = fetch_news(api_key, 'Star Wars')
     from .models import Article  # Importing models here to avoid circular imports
 
     for article_data in articles:

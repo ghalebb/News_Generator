@@ -1,3 +1,20 @@
 .venv/
 
 news_collector.zip
+
+.idea/
+articles/__pycache__/__init__.cpython-311.pyc
+articles/__pycache__/admin.cpython-311.pyc
+articles/__pycache__/apps.cpython-311.pyc
+articles/__pycache__/models.cpython-311.pyc
+articles/__pycache__/urls.cpython-311.pyc
+articles/__pycache__/utils.cpython-311.pyc
+articles/__pycache__/views.cpython-311.pyc
+articles/management/commands/__pycache__/
+articles/management/commands/fetch_articles.py
+articles/migrations/__pycache__/0001_initial.cpython-311.pyc
+articles/migrations/__pycache__/__init__.cpython-311.pyc
+news_collector/__pycache__/__init__.cpython-311.pyc
+news_collector/__pycache__/settings.cpython-311.pyc
+news_collector/__pycache__/urls.cpython-311.pyc
+news_collector/__pycache__/wsgi.cpython-311.pyc

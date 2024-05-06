@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 from articles.models import Article
-from articles.utils import fetch_and_analyze_news
+from articles.utils import fetch_and_analyze_news, process_and_load_news
 
 class Command(BaseCommand):
     help = 'Fetches news articles from NewsAPI and stores them with sentiment analysis'
