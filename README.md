@@ -2,11 +2,11 @@
 
 ## Project Description
 
-News Collector is a Django-based web application designed to aggregate news from various sources, next to each article there is a sentiment score positive and negative
+News Collector is a Django-based web application designed to aggregate news from various sources using NewsAPI, next to each article there is a sentiment score positive and negative
 
 ## Prerequisites
 
-Ensure you have Python installed on your machine. You can download Python from [python.org](https://www.python.org/downloads/). This project was developed using Python 3.8.x.
+Ensure you have Python installed on your machine. You can download Python from [python.org](https://www.python.org/downloads/). This project was developed using Python 3.11.x.
 
 ## Setup
 
