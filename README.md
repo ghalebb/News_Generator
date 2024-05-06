@@ -18,17 +18,19 @@ Ensure you have Python installed on your machine. You can download Python from [
 
 ### 2. Setup Virtual Environment
 Create a new virtual environment in the project directory
-``` python3 pip -m venv .venv
+```bash
+ python3 pip -m venv .venv
 ```
 
 - Activate the virutal environment
 
 on Windows
-``` .\.venv\Scripts\activate 
+```bash
+ .\.venv\Scripts\activate 
 ```
 
 On Linux
-```
+```bash
 source .venv/bin/activate
 ```
 ### 3. Install Dependencies
