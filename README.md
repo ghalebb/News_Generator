@@ -15,7 +15,23 @@ Ensure you have Python installed on your machine. You can download Python from [
  git clone https://github.com/ghalebb/News_Generator.git
  cd News_Generator
 ```
-### 2. Install Dependencies
+
+### 2. Setup Virtual Environment
+Create a new virtual environment in the project directory
+``` python3 pip -m venv .venv
+```
+
+- Activate the virutal environment
+
+on Windows
+``` .\.venv\Scripts\activate 
+```
+
+On Linux
+```
+source .venv/bin/activate
+```
+### 3. Install Dependencies
 
 - Navigate to the project directory where `requirements.txt` is located.
 - Run the following command to install the required Python packages:
@@ -23,7 +39,7 @@ Ensure you have Python installed on your machine. You can download Python from [
   pip install -r requirements.txt
   ```
 
-### 3. Configure the Project
+### 4. Configure the Project
 
 - Navigate to the `news_collector` directory where `settings.py` is located.
 - Modify the `DATABASES` setting to point to your local database. Use SQLite for development by default:
@@ -36,14 +52,14 @@ Ensure you have Python installed on your machine. You can download Python from [
   }
   ```
 
-### 4. Run Migrations
+### 5. Run Migrations
 
 - Initialize the database and create necessary tables by running:
   ```bash
   python manage.py migrate
   ```
 
-### 5. Run the Development Server
+### 6. Run the Development Server
 
 - Start the server with:
   ```bash
