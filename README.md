@@ -2,7 +2,7 @@
 
 ## Project Description
 
-News Collector is a Django-based web application designed to aggregate news from various sources. This project can be easily set up on a local development environment or deployed using AWS Elastic Beanstalk.
+News Collector is a Django-based web application designed to aggregate news from various sources, next to each article there is a sentiment score positive and negative
 
 ## Prerequisites
 
