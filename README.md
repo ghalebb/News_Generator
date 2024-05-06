@@ -55,9 +55,9 @@ source .venv/bin/activate
   ```
 
   - To add new articles to your local database run:
-```bash
-python manage.py fetch_articles your_newsapi_key
-```
+  ```bash
+  python manage.py fetch_articles your_newsapi_key
+  ```
 
 ### 5. Run Migrations
 
