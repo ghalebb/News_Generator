@@ -54,6 +54,11 @@ source .venv/bin/activate
   }
   ```
 
+  - To add new articles to your local database run:
+```bash
+python manage.py fetch_articles your_newsapi_key
+```
+
 ### 5. Run Migrations
 
 - Initialize the database and create necessary tables by running:
@@ -68,13 +73,6 @@ source .venv/bin/activate
   python manage.py runserver
   ```
 - Visit `http://127.0.0.1:8000/` in your browser to view the application.
-
-
-### 7. Updating your Database
-To update the databse run:
-```bash
-python manage.py fetch_articles your_newsapi_key
-```
 
 ## Deployment (AWS Elastic Beanstalk)
 
