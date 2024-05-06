@@ -24,7 +24,7 @@ Create a new virtual environment in the project directory
 
 Activate the virutal environment
 
-- on Windows
+- On Windows
 ```bash
 .\.venv\Scripts\activate 
 ```
