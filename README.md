@@ -22,14 +22,14 @@ Create a new virtual environment in the project directory
  python3 pip -m venv .venv
 ```
 
-- Activate the virutal environment
+Activate the virutal environment
 
-on Windows
+- on Windows
 ```bash
- .\.venv\Scripts\activate 
+.\.venv\Scripts\activate 
 ```
 
-On Linux
+- On Linux
 ```bash
 source .venv/bin/activate
 ```
