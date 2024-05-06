@@ -69,6 +69,13 @@ source .venv/bin/activate
   ```
 - Visit `http://127.0.0.1:8000/` in your browser to view the application.
 
+
+### 7. Updating your Database
+To update the databse run:
+```bash
+python manage.py fetch_articles your_newsapi_key
+```
+
 ## Deployment (AWS Elastic Beanstalk)
 
 ### 1. Prepare the Project
