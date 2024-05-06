@@ -1,8 +1,8 @@
-# News Collector Django Project
+# News Generator Django Project
 
 ## Project Description
 
-News Collector is a Django-based web application designed to aggregate news from various sources using NewsAPI, next to each article there is a sentiment score positive and negative
+News Generator is a Django-based web application designed to aggregate news from various sources using NewsAPI, next to each article there is a sentiment score positive and negative
 
 ## Prerequisites
 
